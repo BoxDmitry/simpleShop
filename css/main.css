@@ -171,10 +171,14 @@ button.disabled {
   pointer-events: none;
 }
 
+button.mini.disabled {
+  background-color: #a1b9d3;
+  opacity: .3;
+}
+
 button.disabled .button-mask:before {
   pointer-events: none;
   background-color: #a1b9d3;
-  opacity: .3;
 }
 
 button.button-icon {
@@ -257,6 +261,13 @@ button.button-icon-round svg {
   border-right: 2px dashed #f2f6fa;
 }
 
+.catalog {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
 .position {
   position: relative;
   display: grid;
@@ -269,6 +280,20 @@ button.button-icon-round svg {
   margin-bottom: 1em;
 }
 
+.catalog .position {
+  display: block;
+  padding: 0.5em;
+  border-radius: 12px;
+  background-color: #fff;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+
+.catalog .position:hover {
+  opacity: .6;
+}
+
 .position:not(:last-child):after {
   content: '';
   display: block;
@@ -279,14 +304,31 @@ button.button-icon-round svg {
   border-bottom: 0.25rem solid #f2f6fa;
 }
 
+.catalog .position:not(:last-child):after {
+  display: none;
+}
+
 .position .image-position {
   width: 48px;
   height: 48px;
 }
 
+.catalog .position .image-position {
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 .position-info {
   width: 100%;
   display: flex;
+}
+
+.catalog .position-info {
+  display: block;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .position-info .position-info_right {
@@ -297,10 +339,21 @@ button.button-icon-round svg {
   margin-left: auto;
 }
 
+.catalog .position-info .position-info_right {
+  display: block;
+  grid-gap: 0;
+  height: auto;
+}
+
 .position-info_title {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.catalog .position-info_title {
+  display: block;
+  height: 60px;
 }
 
 .position-info_count {
@@ -332,11 +385,19 @@ button.button-icon-round svg {
   display: flex;
 }
 
+.catalog .position-info_price {
+  justify-content: center;
+}
+
 .position-info_price .price {
   font: inherit;
   min-width: 63px;
   text-align: right;
   margin-right: 10px;
+}
+
+.catalog .position-info_price .price {
+  min-width: auto;
 }
 
 .position-info_price input.price {
@@ -419,6 +480,7 @@ button.mini.pay-kassa {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px 5px;
   margin-top: 30px;
+  width: 190px;
 }
 
 .key {
@@ -449,8 +511,28 @@ button.mini.pay-kassa {
   height: 40px;
 }
 
-#price-minus-close {
+#price-minus-close,
+#price-minus-check {
   color: #f72a16;
+}
+
+.grid-need-cash {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-gap: 40px;
+  margin-top: 2.5em;
+}
+
+.grid-need-cash h1 {
+  margin-top: 0;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.need-cash {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .hide {

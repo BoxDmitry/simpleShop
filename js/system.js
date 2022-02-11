@@ -72,6 +72,11 @@
       "icon": "pasta",
       "price": 350,
     },
+    "carrot": {
+      "name": "Морковка",
+      "icon": "carrot",
+      "price": 125,
+    },
     "cucumber": {
       "name": "Огурец",
       "icon": "cucumber",
@@ -146,7 +151,7 @@
   };
 
   const delitePosition = (e) => {
-    const ID = Number($(e.delegateTarget).attr("data-postition"));
+    const ID = $(e.delegateTarget).attr("data-position");
     const selector = "#position-" + ID;
 
     const price = Number($(selector).attr("data-price"));
@@ -170,7 +175,7 @@
   };
 
   const editPriceUserPosition = (e) => {
-    const ID = Number($(e.delegateTarget).attr("data-postition"));
+    const ID = Number($(e.delegateTarget).attr("data-position"));
     const selector = "#position-" + ID;
 
     const price = Number($(selector).attr("data-price"));
@@ -185,7 +190,7 @@
   }
 
   const editCountPosition = (e) => {
-    const ID = Number($(e.delegateTarget).attr("data-postition"));
+    const ID = Number($(e.delegateTarget).attr("data-position"));
     const selector = "#position-" + ID;
 
     const type = $(e.delegateTarget).attr("data-type");
@@ -219,7 +224,7 @@
   }
 
   const addCatalogPosition = (e) => {
-    const name = $(e.delegateTarget).attr("data-postition");
+    const name = $(e.delegateTarget).attr("data-position");
     const positionInfo = positions[name];
 
     if (hideListPosition) {
@@ -229,11 +234,10 @@
       hideListPosition = false;
     }
 
-    $(".position-list-kassa").append('<div class="position" id="position-' + positionID + '" data-price="' + positionInfo['price'] + '"><img src="img/position/' + positionInfo['icon'] + '.svg" class="image-position" alt=""/><div class="position-info"><div class="position-info_title"><h3>' + positionInfo['name'] + '</h3></div><div class="position-info_right"><div class="position-info_count"><button class="button-icon-round background count-round" data-type="remove" data-postition="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#minus"></use></svg></button><p class="text-count count-round">1</p><button class="button-icon-round background count-round" data-type="add" data-postition="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#plus"></use></svg></button></div><div class="position-info_price"><p class="price">' + positionInfo['price'] + '</p></div><div class="position-info_delite"><button class="button-icon-round position-delite" data-postition="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#trash"></use></svg></button></div></div></div></div>');
+    $(".position-list-kassa").append('<div class="position" id="position-' + positionID + '" data-price="' + positionInfo['price'] + '"><img src="img/position/' + positionInfo['icon'] + '.svg" class="image-position" alt=""/><div class="position-info"><div class="position-info_title"><h3>' + positionInfo['name'] + '</h3></div><div class="position-info_right"><div class="position-info_count"><button class="button-icon-round background count-round" data-type="remove" data-position="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#minus"></use></svg></button><p class="text-count count-round">1</p><button class="button-icon-round background count-round" data-type="add" data-position="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#plus"></use></svg></button></div><div class="position-info_price"><p class="price">' + positionInfo['price'] + '</p></div><div class="position-info_delite"><button class="button-icon-round position-delite" data-position="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#trash"></use></svg></button></div></div></div></div>');
     positionID++;
     editPriceEnd(positionInfo['price']);
     countEnd++;
-    $("#count-position").text(countEnd === 0 ? "Нет" : countEnd);
 
     const addPosition = $(".position:last-child");
 
@@ -252,7 +256,7 @@
       hideListPosition = false;
     }
 
-    $(".position-list-kassa").append('<div class="position" id="position-' + positionID + '" data-price="100"><img src="img/package.svg" class="image-position" alt=""/><div class="position-info"><div class="position-info_title"><h3>Произвольный товар</h3></div><div class="position-info_right"><div class="position-info_count"><button class="button-icon-round background count-round" data-type="remove" data-postition="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#minus"></use></svg></button><p class="text-count count-round">1</p><button class="button-icon-round background count-round" data-type="add" data-postition="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#plus"></use></svg></button></div><div class="position-info_price"><input type="number" data-postition="' + positionID + '" class="price" value="100" placeholder="100"/></div><div class="position-info_delite"><button class="button-icon-round position-delite" data-postition="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#trash"></use></svg></button></div></div></div></div>');
+    $(".position-list-kassa").append('<div class="position" id="position-' + positionID + '" data-price="100"><img src="img/package.svg" class="image-position" alt=""/><div class="position-info"><div class="position-info_title"><h3>Произвольный товар</h3></div><div class="position-info_right"><div class="position-info_count"><button class="button-icon-round background count-round" data-type="remove" data-position="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#minus"></use></svg></button><p class="text-count count-round">1</p><button class="button-icon-round background count-round" data-type="add" data-position="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#plus"></use></svg></button></div><div class="position-info_price"><input type="number" data-position="' + positionID + '" class="price" value="100" placeholder="100"/></div><div class="position-info_delite"><button class="button-icon-round position-delite" data-position="' + positionID + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#trash"></use></svg></button></div></div></div></div>');
     positionID++;
     editPriceEnd(100);
     countEnd++;
@@ -309,6 +313,23 @@
     $(".position-list-kassa").addClass("hide");
     $(".no-position").removeClass("hide");
 
+    hideListPosition = true;
+
+    positionID = 1;
+    priceEnd = 0;
+    countEnd = 0;
+    discount = 0;
+    priceSumm = 0;
+
+    activeKey = "";
+    $(".kassa-5 .input-value.rub").text("0");
+
+    $("#count-position").text("Нет");
+    $("#price-summ").text("0");
+    $("#price-end").text("0");
+
+    $(".pay-kassa").addClass("disabled");
+
     showList();
   }
 
@@ -316,17 +337,6 @@
 
     switch (list) {
       case 1:
-        hideListPosition = true;
-
-        positionID = 1;
-        priceEnd = 0;
-        countEnd = 0;
-        discount = 0;
-        priceSumm = 0;
-
-        activeKey = "";
-        $(".kassa-5 .input-value.rub").text("0");
-
         buttonNextList = $("#creat-kassa");
 
         buttonNextList.off("click", showList);
@@ -370,6 +380,18 @@
 
         break;
       case 5:
+        $("#count-position-check").text(countEnd);
+        $("#price-summ-check").text(new Intl.NumberFormat('ru-RU').format(priceSumm));
+
+        if (discount > 0) {
+          $("#price-minus-check").parent().removeClass("hide");
+          $("#price-minus-check").text("−" + new Intl.NumberFormat('ru-RU').format(discount));
+        }else {
+          $("#price-minus-check").parent().addClass("hide");
+        }
+
+        $("#price-end-check").text(new Intl.NumberFormat('ru-RU').format(priceEnd));
+
         $(".keyboard .key").off("click", clickKey);
         $(".keyboard .key").on("click", clickKey);
 
@@ -437,10 +459,9 @@
   for (const position in positions) {
     const positionInfo = positions[position];
 
-    catalog.append('<div class="position"><img src="img/position/' + positionInfo['icon'] + '.svg" alt="" class="image-position"/><div class="position-info"><div class="position-info_title"><h3>' + positionInfo['name'] + '</h3></div><div class="position-info_right"><div class="position-info_price"><p class="price">' + positionInfo['price'] + '</p></div><div class="position-info_creat"><button class="button-icon-round position-creat" data-postition="' + position + '"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#plus"></use></svg></button></div></div></div></div>');
+    catalog.append('<div class="position" data-position="' + position + '"><img src="img/position/' + positionInfo['icon'] + '.svg" alt="" class="image-position"/><div class="position-info"><div class="position-info_title"><h3>' + positionInfo['name'] + '</h3></div><div class="position-info_right"><div class="position-info_price"><p class="price">' + positionInfo['price'] + '</p></div></div></div></div>');
 
     const lastCatalogPosition = catalog.find(".position:last-child");
-
-    lastCatalogPosition.find(".position-creat").on("click", addCatalogPosition);
+    lastCatalogPosition.on("click", addCatalogPosition);
   }
 })();
