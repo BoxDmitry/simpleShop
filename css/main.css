@@ -110,7 +110,7 @@ button .button-content {
 }
 
 button .button-mask:before {
-  -webkit-mask-image: url(/img/04680a63d28968977695defd0e7ba498.svg);
+  -webkit-mask-image: url(/simpleShop/img/04680a63d28968977695defd0e7ba498.svg);
   position: absolute;
   top: 0;
   left: 0;
