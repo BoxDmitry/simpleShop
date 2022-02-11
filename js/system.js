@@ -304,10 +304,16 @@
     activeList = 0;
     $(".kassa-7").addClass("hide");
 
+    $(".position-list-kassa .position").remove();
+
+    $(".position-list-kassa").addClass("hide");
+    $(".no-position").removeClass("hide");
+
     showList();
   }
 
   const settingList = (list = activeList) => {
+
     switch (list) {
       case 1:
         hideListPosition = true;
@@ -319,6 +325,9 @@
         priceSumm = 0;
 
         activeKey = "";
+        $(".kassa-5 .input-value.rub").text("0");
+
+        buttonNextList = $("#creat-kassa");
 
         buttonNextList.off("click", showList);
         buttonNextList.on("click", showList);
@@ -375,7 +384,7 @@
 
         break;
       case 6:
-        $(".return-cash-save").text(new Intl.NumberFormat('ru-RU').format(Number(activeKey)) - priceEnd);
+        $(".return-cash-save").text(new Intl.NumberFormat('ru-RU').format(Number(activeKey) - priceEnd));
 
         buttonNextList = $("#return-chash");
 
