@@ -124,7 +124,7 @@
     }
   };
 
-  let activeList = 3;
+  let activeList = 1;
   let buttonNextList = $("#creat-kassa");
   let hideListPosition = true;
 
