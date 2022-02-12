@@ -23,40 +23,47 @@
           <button class="color-green" id="hello-user"><span class="button-mask"></span><span class="button-content">Хорошо</span></button>
         </div>
         <div class="kassa-3 kassa kassa-list">
-          <h1>Чек</h1>
-          <button class="mini pay-kassa disabled">Закрыть чек</button>
-          <section>
-            <div class="no-position icon-info">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="jb"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#box"></use></svg>
-              <h3>В чек ещё не добавлены товары</h3>
+          <div class="grid-width-check">
+            <div>
+              <h1>Чек</h1>
+              <button class="mini pay-kassa pay-kassa-check disabled">Закрыть чек</button>
+              <section>
+                <div class="no-position icon-info">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="jb"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#box"></use></svg>
+                  <h3>В чек ещё не добавлены товары</h3>
+                </div>
+                <div class="position-list position-list-kassa hide">
+                </div>
+              </section>
             </div>
-            <div class="position-list position-list-kassa hide">
+            <div>
+              <section>
+                <h2>Добавить в чек</h2>
+                <div class="new-position">
+                  <button class="button-icon user-position"><img src="img/package.svg" alt="">Произвольный товар</button>
+                  <button class="button-icon catalog-position"><img src="img/talon.svg" alt="">Товар из каталога</button>
+                </div>
+              </section>
+              <section>
+                <div class="close-kassa">
+                  <div class="text">
+                    <p class="title">Товаров</p>
+                    <p class="value" id="count-position">Нет</p>
+                  </div>
+                  <div class="text">
+                    <p class="title">Общая стоимость</p>
+                    <p class="value rub" id="price-summ">0</p>
+                  </div>
+                  <div class="line"></div>
+                  <div class="text big">
+                    <p class="title">Итого</p>
+                    <p class="value rub" id="price-end">0</p>
+                  </div>
+                  <button class="mini all pay-kassa pay-kassa-close disabled">Закрыть чек</button>
+                </div>
+              </section>
             </div>
-          </section>
-          <section>
-            <h2>Добавить в чек</h2>
-            <div class="new-position">
-              <button class="button-icon user-position"><img src="img/package.svg" alt="">Произвольный товар</button>
-              <button class="button-icon catalog-position"><img src="img/talon.svg" alt="">Товар из каталога</button>
-            </div>
-          </section>
-          <section>
-            <div class="close-kassa">
-              <div class="text">
-                <p class="title">Товаров</p>
-                <p class="value" id="count-position">Нет</p>
-              </div>
-              <div class="text">
-                <p class="title">Общая стоимость</p>
-                <p class="value rub" id="price-summ">0</p>
-              </div>
-              <div class="line"></div>
-              <div class="text big">
-                <p class="title">Итого</p>
-                <p class="value rub" id="price-end">0</p>
-              </div>
-            </div>
-          </section>
+          </div>
         </div>
         <div class="kassa-catalog kassa">
           <h1><button class="button-icon-round" id="back-kassa"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="jb"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#arrowLongLeft"></use></svg></button>Каталог товаров</h1>
@@ -70,7 +77,7 @@
             <button class="color-red" id="no-have-card" style="margin-left: 15px"><span class="button-mask"></span><span class="button-content">Нет</span></button>
           </div>
         </div>
-        <div class="kassa-5 kassa kassa-big-info">
+        <div class="kassa-5 kassa kassa-big-info" style="padding-top: 0">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none"><rect opacity="0.01" width="36" height="36" fill="#FFE5E5"/><mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36"><rect width="36" height="36" fill="white"/></mask><g mask="url(#mask0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.9627 33.2997C28.6575 32.3332 34.0875 25.5457 33.2711 17.3796C32.4547 9.21355 26.8882 2.45879 16.0594 3.6379C5.23057 4.81701 1.49813 12.1833 2.84142 20.369C4.18471 28.5548 11.2678 34.2663 19.9627 33.2997Z" fill="#FABC22"/><path d="M14.0743 19.208L12.7833 19.208C12.5717 19.208 12.3883 19.1244 12.233 18.9573C12.0778 18.7901 12.0002 18.5926 12.0002 18.3647L12.0002 17.9544C12.0002 17.7265 12.0778 17.529 12.233 17.3618C12.3883 17.1947 12.5717 17.1111 12.7833 17.1111L14.0743 17.1111L14.0743 10.8889C14.0743 10.661 14.1449 10.4634 14.286 10.2963C14.4412 10.1292 14.6316 10.0456 14.8574 10.0456C15.1255 10.0456 15.4147 10.0456 15.7251 10.0456C16.0355 10.0304 16.3459 10.0228 16.6563 10.0228C16.9667 10.0076 17.263 10 17.5452 10C17.8274 10 18.0673 10 18.2648 10C19.3653 10 20.2824 10.1216 21.0161 10.3647C21.7498 10.6078 22.3353 10.9421 22.7727 11.3675C23.2242 11.7778 23.5417 12.2716 23.7251 12.849C23.9085 13.4112 24.0002 14.019 24.0002 14.6724C24.0002 16.0399 23.5346 17.1415 22.6034 17.9772C21.6863 18.7977 20.353 19.208 18.6034 19.208L16.6563 19.208L16.6563 21.0997L19.3442 21.0997C19.5558 21.0997 19.7392 21.1833 19.8944 21.3504C20.0496 21.5176 20.1272 21.7151 20.1272 21.943L20.1272 22.3533C20.1272 22.5812 20.0496 22.7787 19.8944 22.9459C19.7392 23.113 19.5558 23.1966 19.3442 23.1966L16.6563 23.1966L16.6563 25.1567C16.6563 25.3846 16.5787 25.5821 16.4235 25.7493C16.2683 25.9164 16.0849 26 15.8733 26L14.8574 26C14.6457 26 14.4623 25.9164 14.3071 25.7493C14.1519 25.5821 14.0743 25.3846 14.0743 25.1567L14.0743 23.1966L12.7833 23.1966C12.5717 23.1966 12.3883 23.113 12.233 22.9459C12.0778 22.7787 12.0002 22.5812 12.0002 22.3533L12.0002 21.943C12.0002 21.7151 12.0778 21.5176 12.233 21.3504C12.3883 21.1833 12.5717 21.0997 12.7833 21.0997L14.0743 21.0997L14.0743 19.208ZM18.5188 17.1111C18.8997 17.1111 19.2524 17.0731 19.577 16.9972C19.9156 16.9212 20.2048 16.7996 20.4447 16.6325C20.6987 16.4501 20.8962 16.2222 21.0373 15.9487C21.1784 15.6752 21.2489 15.3333 21.2489 14.9231C21.2489 14.0874 21.0161 13.4948 20.5505 13.1453C20.099 12.7958 19.4288 12.6211 18.5399 12.6211C18.2718 12.6211 17.9756 12.6287 17.651 12.6439C17.3406 12.6439 17.0091 12.6515 16.6563 12.6667L16.6563 17.1111L18.5188 17.1111Z" fill="white"/></g></svg>
           <div class="grid-need-cash">
             <div class="check">

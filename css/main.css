@@ -102,6 +102,10 @@ button.mini {
   border-radius: 12px;
 }
 
+button.mini.all {
+  width: 100%;
+}
+
 button.mini:hover {
   background-color: #2788e9;
 }
@@ -264,8 +268,19 @@ button.button-icon-round svg {
 .catalog {
   padding: 2em;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .catalog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .catalog {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .position {
@@ -431,6 +446,7 @@ button.button-icon-round svg {
   background-color: #fff;
   padding: 2em;
   border-radius: 20px;
+  min-width: auto;
 }
 
 .check .close-kassa .value {
@@ -462,12 +478,18 @@ button.button-icon-round svg {
   line-height: 1.75rem;
 }
 
-button.mini.pay-kassa {
+button.mini.pay-kassa-check {
   top: 5px;
   right: 0;
   padding: 0.6em 1.5em;
   margin-bottom: 1.75em;
   position: absolute;
+}
+
+button.mini.pay-kassa-close {
+  margin-top: 2em;
+  width: calc(100% - 2.5em);
+  padding: 0.5em;
 }
 
 .input-value {
@@ -533,6 +555,37 @@ button.mini.pay-kassa {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+@media screen and (max-width: 1000px) {
+  .grid-width-check .pay-kassa-close {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .grid-width-check {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 300px;
+  }
+
+  .grid-width-check .new-position {
+    display: block;
+    padding-top: 10px;
+  }
+
+  .grid-width-check .new-position button {
+    margin-top: 0.5em;
+  }
+
+  .grid-width-check .new-position button:nth-child(1) {
+    border: none;
+  }
+
+  .grid-width-check .pay-kassa-check {
+    display: none;
+  }
 }
 
 .hide {
