@@ -209,7 +209,7 @@ button.button-icon-round {
 
 button.button-icon-round.background {
   background-color: #f2f6fa;
-  padding: 5px;
+  padding: 9px;
 }
 
 button.button-icon-round svg {
@@ -265,34 +265,65 @@ button.button-icon-round svg {
   border-right: 2px dashed #f2f6fa;
 }
 
-.catalog {
+.catalog,
+.categrory {
   padding: 2em;
   display: grid;
   grid-gap: 20px;
 }
 
 @media screen and (max-width: 1000px) {
-  .catalog {
+  .catalog,
+  .categrory {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .catalog {
+  .catalog,
+  .categrory {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 
-.position {
+.position,
+.categrory-item {
   position: relative;
   display: grid;
   grid-template-columns: 48px 1fr;
   grid-gap: 20px;
 }
 
-.position:not(:last-child) {
-  padding-bottom: 1.4em;
-  margin-bottom: 1em;
+.position {
+  padding: 1em 0;
+}
+
+.position:first-child {
+  padding-top: 0;
+}
+
+.position:last-child {
+  padding-bottom: 0;
+}
+
+.categrory-item {
+  display: flex;
+  padding: 1em;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #fff;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+
+.categrory-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.categrory-item:hover {
+  opacity: .6;
 }
 
 .catalog .position {
@@ -377,8 +408,8 @@ button.button-icon-round svg {
 }
 
 .position-info_count .count-round {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 .position-info_count .text-count {
@@ -591,6 +622,27 @@ button.mini.pay-kassa-close {
     position: sticky;
     top: 20px;
   }
+}
+
+.kassa-catalog h2 {
+  padding: 0 1em;
+  margin-top: 2em;
+}
+
+.button-app {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  padding: 10px;
+}
+
+.button-app .button-icon-round {
+  width: 40px;
+  height: 40px;
+}
+
+.button-app .button-icon-round svg {
+  color: #0073e6;
 }
 
 .hide {

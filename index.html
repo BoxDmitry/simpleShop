@@ -67,9 +67,33 @@
             </div>
           </div>
         </div>
-        <div class="kassa-catalog kassa">
-          <h1><button class="button-icon-round" id="back-kassa"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="jb"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#arrowLongLeft"></use></svg></button>Каталог товаров</h1>
-          <div class="position-list catalog"></div>
+        <div class="kassa-catalog kassa-catalog hide">
+          <div class="kassa-catalog-home">
+            <h1><button class="button-icon-round" id="back-kassa"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="jb"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#arrowLongLeft"></use></svg></button>Каталог товаров</h1>
+            <h2>Корзины</h2>
+            <div class="position-list catalog catalog-basket"></div>
+            <h2>Категории</h2>
+            <div class="categrory-catalog">
+              <div class="categrory">
+                <div class="categrory-item" data-category="products">
+                  <img src="/img/position/tomato.svg"/>
+                  <h3>Продукты</h3>
+                </div>
+                <div class="categrory-item" data-category="games">
+                  <img src="/img/games.svg"/>
+                  <h3>Игрушки</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="kassa-catalog-categrory kassa-catalog-products hide">
+            <h1><button class="button-icon-round back-kassa-catalog"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="jb"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#arrowLongLeft"></use></svg></button>Продукты</h1>
+            <div class="position-list catalog catalog-products"></div>
+          </div>
+          <div class="kassa-catalog-categrory kassa-catalog-games hide">
+            <h1><button class="button-icon-round back-kassa-catalog"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="jb"><use xlink:href="/simpleShop/img/0e61676508755ee206b2b956bbda056f.svg#arrowLongLeft"></use></svg></button>Игрушки</h1>
+            <div class="position-list catalog catalog-games"></div>
+          </div>
         </div>
         <div class="kassa-4 kassa kassa-big-info">
           <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.11516 10.0052C7.95184 9.64814 23.0323 7.17732 25.8561 6.78998C28.6798 6.40263 30.2993 6.47964 30.9596 9.87646C31.3209 11.7353 32.6107 18.371 33.0328 20.5424C33.4549 22.7137 32.9754 24.3741 29.1102 25.1254C26.8739 25.5601 13.2747 28.2035 10.7566 28.693C8.23838 29.1825 5.98852 29.9895 5.15528 25.7029C4.32204 21.4162 3.69608 18.1959 3.2774 16.042C2.47016 11.8891 4.09053 10.3987 6.11516 10.0052Z" fill="#00C2FC"/><path fill-rule="evenodd" clip-rule="evenodd" d="M1.59619 14.8695L31.4936 9.48781L32.2986 13.629L2.56216 19.839L1.59619 14.8695Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5184 26.1542C16.3266 25.8027 18.326 23.8929 17.9745 22.0847C17.623 20.2765 15.7927 18.6864 13.9845 19.0378C12.1763 19.3893 10.6657 21.6289 11.0172 23.4371C11.3687 25.2452 12.7102 26.5057 14.5184 26.1542Z" fill="#FABC22"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10.9485 26.9749C12.5952 26.6548 13.193 24.5927 12.8415 22.7845C12.49 20.9763 10.1247 19.9149 8.47797 20.235C6.83123 20.5551 6.68573 22.954 7.0372 24.7622C7.38868 26.5704 9.30172 27.295 10.9485 26.9749Z" fill="#F72A16"/><path d="M28.8889 16.9328C29.4378 16.8261 29.9693 17.1846 30.076 17.7335C30.1751 18.2432 29.8731 18.7379 29.3899 18.8914L29.2753 18.9206L23.3119 20.0798C22.763 20.1865 22.2315 19.828 22.1248 19.2791C22.0258 18.7693 22.3278 18.2747 22.8109 18.1212L22.9255 18.092L28.8889 16.9328Z" fill="white"/><path d="M27.9038 19.2476C28.4527 19.1409 28.9842 19.4994 29.0909 20.0483C29.19 20.558 28.888 21.0527 28.4048 21.2062L28.2902 21.2354L25.3085 21.815C24.7596 21.9217 24.2281 21.5632 24.1214 21.0143C24.0223 20.5046 24.3244 20.0099 24.8075 19.8564L24.9221 19.8272L27.9038 19.2476Z" fill="white"/></svg>
@@ -117,7 +141,7 @@
                 <p class="key-2 key" data-value="2">2</p>
                 <p class="key-3 key" data-value="3">3</p>
                 <p class="key-0 key" data-value="0" style="grid-column: 1 / 3;">0</p>
-                <p class="key-delite key" data-value="delite"><svg viewBox="0 0 28 28" width="20px" height="20px" style="display: block;"><g fill-rule="nonzero" fill="none"><path d="M0 0h28v28H0z"></path><path d="M18.666 4c2.245 0 3.287.278 4.265.801a5.452 5.452 0 012.268 2.268c.523.978.801 2.02.801 4.265v5.332c0 2.245-.278 3.287-.801 4.265a5.452 5.452 0 01-2.268 2.268c-.978.523-2.02.801-4.265.801h-6.91c-1.124 0-1.52-.05-1.954-.165a3.51 3.51 0 01-1.182-.56l-.142-.108c-.306-.24-.605-.547-1.222-1.301L3.56 17.34c-1-1.226-1.26-1.757-1.43-2.39a3.605 3.605 0 010-1.902c.17-.633.43-1.164 1.43-2.39l3.96-4.842c.527-.626.786-.863 1.101-1.091a3.51 3.51 0 011.182-.56c.406-.109.777-.16 1.739-.165L18.666 4zm0 2l-7.28.002-.328.007c-.288.01-.463.028-.613.059l-.13.03a1.512 1.512 0 00-.523.248l-.105.08c-.176.145-.366.348-.758.823l-3.82 4.676c-.655.8-.881 1.148-1 1.486l-.048.157c-.08.293-.08.57 0 .864l.048.157c.119.338.345.686 1 1.486l3.82 4.676.332.392c.185.212.309.334.426.43l.105.08c.166.12.326.196.524.249l.142.033c.198.039.443.058.928.063l7.28.002c1.777 0 2.565-.16 3.321-.565a3.453 3.453 0 001.448-1.448c.38-.712.545-1.452.563-3.018v-5.938c-.018-1.566-.182-2.306-.563-3.018a3.453 3.453 0 00-1.448-1.448C21.231 6.16 20.443 6 18.666 6zm-6.873 4.293a1 1 0 011.414 0l2.293 2.292 2.293-2.292a1 1 0 011.414 1.414L16.915 14l2.292 2.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L15.5 15.414l-2.293 2.293a1 1 0 01-1.414-1.414L14.086 14l-2.293-2.293a1 1 0 01-.083-1.32z" fill="currentColor"></path></g></svg></p>
+                <p class="key-delite key" data-value="delite"><svg viewBox="0 0 28 28" width="20px" height="20px"><g fill-rule="nonzero" fill="none"><path d="M0 0h28v28H0z"></path><path d="M18.666 4c2.245 0 3.287.278 4.265.801a5.452 5.452 0 012.268 2.268c.523.978.801 2.02.801 4.265v5.332c0 2.245-.278 3.287-.801 4.265a5.452 5.452 0 01-2.268 2.268c-.978.523-2.02.801-4.265.801h-6.91c-1.124 0-1.52-.05-1.954-.165a3.51 3.51 0 01-1.182-.56l-.142-.108c-.306-.24-.605-.547-1.222-1.301L3.56 17.34c-1-1.226-1.26-1.757-1.43-2.39a3.605 3.605 0 010-1.902c.17-.633.43-1.164 1.43-2.39l3.96-4.842c.527-.626.786-.863 1.101-1.091a3.51 3.51 0 011.182-.56c.406-.109.777-.16 1.739-.165L18.666 4zm0 2l-7.28.002-.328.007c-.288.01-.463.028-.613.059l-.13.03a1.512 1.512 0 00-.523.248l-.105.08c-.176.145-.366.348-.758.823l-3.82 4.676c-.655.8-.881 1.148-1 1.486l-.048.157c-.08.293-.08.57 0 .864l.048.157c.119.338.345.686 1 1.486l3.82 4.676.332.392c.185.212.309.334.426.43l.105.08c.166.12.326.196.524.249l.142.033c.198.039.443.058.928.063l7.28.002c1.777 0 2.565-.16 3.321-.565a3.453 3.453 0 001.448-1.448c.38-.712.545-1.452.563-3.018v-5.938c-.018-1.566-.182-2.306-.563-3.018a3.453 3.453 0 00-1.448-1.448C21.231 6.16 20.443 6 18.666 6zm-6.873 4.293a1 1 0 011.414 0l2.293 2.292 2.293-2.292a1 1 0 011.414 1.414L16.915 14l2.292 2.293a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.414 0L15.5 15.414l-2.293 2.293a1 1 0 01-1.414-1.414L14.086 14l-2.293-2.293a1 1 0 01-.083-1.32z" fill="currentColor"></path></g></svg></p>
               </div>
               <button style="margin-top: 40px" class="color-green" id="save-cash"><span class="button-mask"></span><span class="button-content">Сохранить</span></button>
             </div>
@@ -166,6 +190,18 @@
         </div>
       </main>
     </div>
+    <p class="button-app">
+      <button class="button-icon-round" id="fullscreen">
+        <svg viewBox="0 0 24 24">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M14 4.9a.9.9 0 01.9-.9h4.2a.9.9 0 01.9.9v4.2a.9.9 0 11-1.8 0V7.073l-3.664 3.663a.9.9 0 11-1.272-1.272L16.927 5.8H14.9a.9.9 0 01-.9-.9zm-3.264 8.364a.9.9 0 010 1.272L7.073 18.2h2.025a.9.9 0 110 1.8H4.9a.9.9 0 01-.9-.9v-4.2a.9.9 0 011.8 0v2.027l3.664-3.663a.9.9 0 011.272 0z" fill="currentColor"></path>
+        </svg>
+      </button>
+      <button class="button-icon-round hide" id="fullscreen-exit">
+        <svg viewBox="0 0 24 24">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5 13.9a.9.9 0 01.9-.9h4.2a.9.9 0 01.9.9v4.2a.9.9 0 11-1.8 0v-2.027l-3.664 3.663a.9.9 0 11-1.272-1.272L7.927 14.8H5.9a.9.9 0 01-.9-.9zm14.736-9.636a.9.9 0 010 1.272L16.073 9.2h2.025a.9.9 0 010 1.8H13.9a.9.9 0 01-.9-.9V5.9a.9.9 0 111.8 0v2.027l3.664-3.663a.9.9 0 011.272 0z" fill="currentColor"></path>
+        </svg>
+      </button>
+    </p>
     <script src="/simpleShop/js/system.js"></script>
   </body>
 </html>

@@ -2,125 +2,151 @@
 
 (function () {
   const positions = {
-    "basket_x": {
-      "name": "Большая корзинка",
-      "icon": "basket_x",
-      "price": 200,
+    basket: {
+      "basket_x": {
+        "name": "Большая корзинка",
+        "icon": "basket_x",
+        "price": 200,
+      },
+      "basket_s": {
+        "name": "Средняя корзинка",
+        "icon": "basket_s",
+        "price": 100,
+      },
+      "basket_m": {
+        "name": "Маленькая корзинка",
+        "icon": "basket_m",
+        "price": 50,
+      },
     },
-    "basket_s": {
-      "name": "Средняя корзинка",
-      "icon": "basket_s",
-      "price": 100,
+    products: {
+      "watermelon": {
+        "name": "Арбуз",
+        "icon": "watermelon",
+        "price": 300,
+      },
+      "pineapple": {
+        "name": "Апельсин",
+        "icon": "orange",
+        "price": 75,
+      },
+      "orange": {
+        "name": "Ананас",
+        "icon": "pineapple",
+        "price": 300,
+      },
+      "eggplant": {
+        "name": "Баклажан",
+        "icon": "eggplant",
+        "price": 175,
+      },
+      "banana": {
+        "name": "Банан",
+        "icon": "banana",
+        "price": 300,
+      },
+      "grape": {
+        "name": "Виноград",
+        "icon": "grape",
+        "price": 300,
+      },
+      "mushroom": {
+        "name": "Гриб",
+        "icon": "mushroom",
+        "price": 75,
+      },
+      "kiwi": {
+        "name": "Киви",
+        "icon": "kiwi",
+        "price": 125,
+      },
+      "cabbage": {
+        "name": "Капуста",
+        "icon": "cabbage",
+        "price": 175,
+      },
+      "onion": {
+        "name": "Лук",
+        "icon": "onion",
+        "price": 175,
+      },
+      "pasta": {
+        "name": "Макароны",
+        "icon": "pasta",
+        "price": 350,
+      },
+      "carrot": {
+        "name": "Морковка",
+        "icon": "carrot",
+        "price": 125,
+      },
+      "cucumber": {
+        "name": "Огурец",
+        "icon": "cucumber",
+        "price": 175,
+      },
+      "tomato": {
+        "name": "Помидор",
+        "icon": "tomato",
+        "price": 75,
+      },
+      "pepper": {
+        "name": "Перец",
+        "icon": "pepper",
+        "price": 125,
+      },
+      "fish": {
+        "name": "Рыба",
+        "icon": "fish",
+        "price": 400,
+      },
+      "sausages": {
+        "name": "Сосиски",
+        "icon": "sausages",
+        "price": 350,
+      },
+      "cheese": {
+        "name": "Сыр",
+        "icon": "cheese",
+        "price": 125,
+      },
+      "bread": {
+        "name": "Хлеб",
+        "icon": "bread",
+        "price": 100,
+      },
+      "garlic": {
+        "name": "Чеснок",
+        "icon": "garlic",
+        "price": 75,
+      },
+      "apple": {
+        "name": "Яблоко",
+        "icon": "apple",
+        "price": 75,
+      }
     },
-    "basket_m": {
-      "name": "Маленькая корзинка",
-      "icon": "basket_m",
-      "price": 50,
-    },
-    "watermelon": {
-      "name": "Арбуз",
-      "icon": "watermelon",
-      "price": 300,
-    },
-    "pineapple": {
-      "name": "Апельсин",
-      "icon": "orange",
-      "price": 75,
-    },
-    "orange": {
-      "name": "Ананас",
-      "icon": "pineapple",
-      "price": 300,
-    },
-    "eggplant": {
-      "name": "Баклажан",
-      "icon": "eggplant",
-      "price": 175,
-    },
-    "banana": {
-      "name": "Банан",
-      "icon": "banana",
-      "price": 300,
-    },
-    "grape": {
-      "name": "Виноград",
-      "icon": "grape",
-      "price": 300,
-    },
-    "mushroom": {
-      "name": "Гриб",
-      "icon": "mushroom",
-      "price": 75,
-    },
-    "kiwi": {
-      "name": "Киви",
-      "icon": "kiwi",
-      "price": 125,
-    },
-    "cabbage": {
-      "name": "Капуста",
-      "icon": "cabbage",
-      "price": 175,
-    },
-    "onion": {
-      "name": "Лук",
-      "icon": "onion",
-      "price": 175,
-    },
-    "pasta": {
-      "name": "Макароны",
-      "icon": "pasta",
-      "price": 350,
-    },
-    "carrot": {
-      "name": "Морковка",
-      "icon": "carrot",
-      "price": 125,
-    },
-    "cucumber": {
-      "name": "Огурец",
-      "icon": "cucumber",
-      "price": 175,
-    },
-    "tomato": {
-      "name": "Помидор",
-      "icon": "tomato",
-      "price": 75,
-    },
-    "pepper": {
-      "name": "Перец",
-      "icon": "pepper",
-      "price": 125,
-    },
-    "fish": {
-      "name": "Рыба",
-      "icon": "fish",
-      "price": 400,
-    },
-    "sausages": {
-      "name": "Сосиски",
-      "icon": "sausages",
-      "price": 350,
-    },
-    "cheese": {
-      "name": "Сыр",
-      "icon": "cheese",
-      "price": 125,
-    },
-    "bread": {
-      "name": "Хлеб",
-      "icon": "bread",
-      "price": 100,
-    },
-    "garlic": {
-      "name": "Чеснок",
-      "icon": "garlic",
-      "price": 75,
-    },
-    "apple": {
-      "name": "Яблоко",
-      "icon": "apple",
-      "price": 75,
+    games: {
+      "puzzles-160": {
+        "name": "Пазлы — 160",
+        "icon": "puzzles",
+        "price": 300,
+      },
+      "puzzles-100": {
+        "name": "Пазлы — 100",
+        "icon": "puzzles",
+        "price": 200,
+      },
+      "puzzles-60": {
+        "name": "Пазлы — 60",
+        "icon": "puzzles",
+        "price": 150,
+      },
+      "puzzles-30": {
+        "name": "Пазлы — 30",
+        "icon": "puzzles",
+        "price": 100,
+      }
     }
   };
 
@@ -225,7 +251,8 @@
 
   const addCatalogPosition = (e) => {
     const name = $(e.delegateTarget).attr("data-position");
-    const positionInfo = positions[name];
+    const category = $(e.delegateTarget).attr("data-category");
+    const positionInfo = positions[category][name];
 
     if (hideListPosition) {
       $(".no-position").addClass("hide");
@@ -269,14 +296,36 @@
     addPosition.find(".price").on("input", editPriceUserPosition);
   };
 
+  const hideCategrory = () => {
+    $(".kassa-catalog-categrory:not(.hide) .back-kassa-catalog").off("click", hideCategrory);
+
+    $(".kassa-catalog-categrory:not(.hide)").addClass("hide");
+    $(".kassa-catalog-home").removeClass("hide");
+  };
+
+  const showCategrory = (e) => {
+    const name = $(e.delegateTarget).attr("data-category");
+    const selector = ".kassa-catalog-" + name;
+
+    $(selector).find(".back-kassa-catalog").on("click", hideCategrory);
+
+    $(selector).removeClass("hide");
+    $(".kassa-catalog-home").addClass("hide");
+  };
+
   const showCatalog = () => {
     $(".kassa-3").addClass("hide");
     $(".kassa-catalog").removeClass("hide");
+
+    $(".categrory-item").on("click", showCategrory);
   };
 
   const hideCatalog = () => {
     $(".kassa-catalog").addClass("hide");
     $(".kassa-3").removeClass("hide");
+
+    $(".categrory-item").off("click", showCategrory);
+    hideCategrory();
   };
 
   const haveCard = () => {
@@ -454,14 +503,53 @@
   $(".kassa:not(.kassa-" + activeList + ")").addClass("hide");
   settingList();
 
-  const catalog = $(".kassa-catalog .position-list");
+  let catalog = $(".kassa-catalog .catalog-basket");
 
-  for (const position in positions) {
-    const positionInfo = positions[position];
+  for (const position in positions.basket) {
+    const positionInfo = positions.basket[position];
 
-    catalog.append('<div class="position" data-position="' + position + '"><img src="img/position/' + positionInfo['icon'] + '.svg" alt="" class="image-position"/><div class="position-info"><div class="position-info_title"><h3>' + positionInfo['name'] + '</h3></div><div class="position-info_right"><div class="position-info_price"><p class="price">' + positionInfo['price'] + '</p></div></div></div></div>');
+    catalog.append('<div class="position" data-category="basket" data-position="' + position + '"><img src="img/position/' + positionInfo['icon'] + '.svg" alt="" class="image-position"/><div class="position-info"><div class="position-info_title"><h3>' + positionInfo['name'] + '</h3></div><div class="position-info_right"><div class="position-info_price"><p class="price">' + positionInfo['price'] + '</p></div></div></div></div>');
 
     const lastCatalogPosition = catalog.find(".position:last-child");
     lastCatalogPosition.on("click", addCatalogPosition);
   }
+
+
+  catalog = $(".kassa-catalog .catalog-products");
+
+  for (const position in positions.products) {
+    const positionInfo = positions.products[position];
+
+    catalog.append('<div class="position" data-category="products" data-position="' + position + '"><img src="img/position/' + positionInfo['icon'] + '.svg" alt="" class="image-position"/><div class="position-info"><div class="position-info_title"><h3>' + positionInfo['name'] + '</h3></div><div class="position-info_right"><div class="position-info_price"><p class="price">' + positionInfo['price'] + '</p></div></div></div></div>');
+
+    const lastCatalogPosition = catalog.find(".position:last-child");
+    lastCatalogPosition.on("click", addCatalogPosition);
+  }
+
+
+  catalog = $(".kassa-catalog .catalog-games");
+
+  for (const position in positions.games) {
+    const positionInfo = positions.games[position];
+
+    catalog.append('<div class="position" data-category="games" data-position="' + position + '"><img src="img/position/' + positionInfo['icon'] + '.svg" alt="" class="image-position"/><div class="position-info"><div class="position-info_title"><h3>' + positionInfo['name'] + '</h3></div><div class="position-info_right"><div class="position-info_price"><p class="price">' + positionInfo['price'] + '</p></div></div></div></div>');
+
+    const lastCatalogPosition = catalog.find(".position:last-child");
+    lastCatalogPosition.on("click", addCatalogPosition);
+  }
+
+
+  $("#fullscreen").on("click", () => {
+    document.documentElement.requestFullscreen();
+
+    $("#fullscreen").addClass("hide");
+    $("#fullscreen-exit").removeClass("hide");
+  });
+
+  $("#fullscreen-exit").on("click", () => {
+    document.exitFullscreen();
+
+    $("#fullscreen").removeClass("hide");
+    $("#fullscreen-exit").addClass("hide");
+  })
 })();
