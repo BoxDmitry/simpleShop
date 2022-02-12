@@ -586,6 +586,11 @@ button.mini.pay-kassa-close {
   .grid-width-check .pay-kassa-check {
     display: none;
   }
+
+  .window-sticky {
+    position: sticky;
+    top: 20px;
+  }
 }
 
 .hide {
