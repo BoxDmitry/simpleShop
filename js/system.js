@@ -6,24 +6,24 @@
       "basket_x": {
         "name": "Большая корзинка",
         "icon": "basket_x",
-        "price": 200,
+        "price": 299,
       },
       "basket_s": {
         "name": "Средняя корзинка",
         "icon": "basket_s",
-        "price": 100,
+        "price": 199,
       },
       "basket_m": {
         "name": "Маленькая корзинка",
         "icon": "basket_m",
-        "price": 50,
+        "price": 59,
       },
     },
     products: {
       "watermelon": {
         "name": "Арбуз",
         "icon": "watermelon",
-        "price": 300,
+        "price": 345,
       },
       "pineapple": {
         "name": "Апельсин",
@@ -33,7 +33,7 @@
       "orange": {
         "name": "Ананас",
         "icon": "pineapple",
-        "price": 300,
+        "price": 399,
       },
       "eggplant": {
         "name": "Баклажан",
@@ -43,7 +43,7 @@
       "banana": {
         "name": "Банан",
         "icon": "banana",
-        "price": 300,
+        "price": 299,
       },
       "grape": {
         "name": "Виноград",
@@ -53,12 +53,12 @@
       "mushroom": {
         "name": "Гриб",
         "icon": "mushroom",
-        "price": 75,
+        "price": 79,
       },
       "kiwi": {
         "name": "Киви",
         "icon": "kiwi",
-        "price": 125,
+        "price": 199,
       },
       "cabbage": {
         "name": "Капуста",
@@ -83,7 +83,7 @@
       "cucumber": {
         "name": "Огурец",
         "icon": "cucumber",
-        "price": 175,
+        "price": 199,
       },
       "tomato": {
         "name": "Помидор",
@@ -98,7 +98,7 @@
       "fish": {
         "name": "Рыба",
         "icon": "fish",
-        "price": 400,
+        "price": 499,
       },
       "sausages": {
         "name": "Сосиски",
@@ -108,17 +108,17 @@
       "cheese": {
         "name": "Сыр",
         "icon": "cheese",
-        "price": 125,
+        "price": 199,
       },
       "bread": {
         "name": "Хлеб",
         "icon": "bread",
-        "price": 100,
+        "price": 99,
       },
       "garlic": {
         "name": "Чеснок",
         "icon": "garlic",
-        "price": 75,
+        "price": 49,
       },
       "apple": {
         "name": "Яблоко",
